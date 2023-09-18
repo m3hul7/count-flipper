@@ -1,0 +1,19 @@
+// Global styles goes here
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.counter {
+    background: rgb(32,31,40);
+    background: linear-gradient(135deg, rgba(32,31,40,1) 0%, rgba(35,29,42,1) 50%);
+}

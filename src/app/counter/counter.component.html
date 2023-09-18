@@ -1,0 +1,71 @@
+<section class="counter d-flex flex-column h-100    ">
+    <div class="counter-header h-75 col-12 d-flex flex-column align-items-center justify-content-evenly">
+        <h2 class="text-light counter-heading">WE'RE LAUNCHING SOON</h2>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column justify-content-between align-items-center">
+                <div class="behind-card rounded-3 overflow-hidden position-relative">
+                    <div class="card-top d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="top-card position-absolute top-0 text-primary ">{{days}}</span>
+                    </div>
+                    <div class="card-bottom d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="bottom-card position-absolute text-primary ">{{days}}</span>
+                    </div>
+                    <div [ngClass]="daysFlip == true ? 'flip-animation d-block' : 'd-none'" class="flip-container rounded-3 position-absolute d-flex justify-content-center overflow-hidden">
+                        <span class="flipper text-primary ">{{days}}</span>
+                    </div>
+                </div>
+                <h6 class="counter-title mt-4 text-secondary">DAYS</h6>
+            </div>
+            
+            <div class="d-flex flex-column justify-content-between align-items-center">
+                <div class="behind-card rounded-3 overflow-hidden position-relative ms-5">
+                    <div class="card-top d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="top-card position-absolute top-0 text-primary ">{{hours}}</span>
+                    </div>
+                    <div class="card-bottom d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="bottom-card position-absolute text-primary ">{{hours}}</span>
+                    </div>
+                    <div [ngClass]="hoursFlip == true ? 'flip-animation d-block' : 'd-none'" class="flip-container rounded-3 position-absolute d-flex justify-content-center overflow-hidden">
+                        <span class="flipper text-primary ">{{hours}}</span>
+                    </div>
+                </div>
+                <h6 class="counter-title mt-4 text-secondary">HOURS</h6>
+            </div>
+
+            <div class="d-flex flex-column justify-content-between align-items-center">
+                <div class="behind-card rounded-3 overflow-hidden position-relative ms-5">
+                    <div class="card-top d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="top-card position-absolute top-0 text-primary ">{{minutes}}</span>
+                    </div>
+                    <div class="card-bottom d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="bottom-card position-absolute text-primary ">{{minutes}}</span>
+                    </div>
+                    <div [ngClass]="minutesFlip == true ? 'flip-animation d-block' : 'd-none'" class="flip-container rounded-3 position-absolute d-flex justify-content-center overflow-hidden">
+                        <span class="flipper text-primary ">{{minutes}}</span>
+                    </div>
+                </div>
+                <h6 class="counter-title mt-4 text-secondary">MINUTES</h6>
+            </div>
+
+            <div class="d-flex flex-column justify-content-between align-items-center" >
+                <div class="behind-card rounded-3 overflow-hidden position-relative ms-5">
+                    <div class="card-top d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="top-card position-absolute top-0 text-primary ">{{seconds}}</span>
+                    </div>
+                    <div class="card-bottom d-flex justify-content-center rounded-3 position-relative overflow-hidden">
+                        <span class="bottom-card position-absolute text-primary ">{{seconds}}</span>
+                    </div>
+                    <div [ngClass]="secondsFlip == true ? 'flip-animation d-block' : 'd-none'" class="flip-container rounded-3 position-absolute d-flex justify-content-center overflow-hidden">
+                        <span class="flipper text-primary ">{{seconds}}</span>
+                    </div>
+                </div>
+                <h6 class="counter-title mt-4 text-secondary">SECONDS</h6>
+            </div>
+        </div>
+    </div>
+    <div class="counter-footer h-25 col-12 d-flex justify-content-center align-items-center">
+        <img src="./../../assets/images/icon-facebook.svg" alt="" srcset="">
+        <img class="ps-5" src="./../../assets/images/icon-instagram.svg" alt="" srcset="">
+        <img class="ps-5" src="./../../assets/images/icon-pinterest.svg" alt="" srcset="">
+    </div>
+</section>

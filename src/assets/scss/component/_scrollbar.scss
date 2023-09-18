@@ -1,0 +1,22 @@
+::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+
+    &-thumb {
+        background-color: $info;
+        border-radius: 12px;
+    }
+
+    &-button {
+        visibility: hidden;
+        height: 2px;
+        width: 2px;
+
+        &:vertical:start:increment,
+        &:vertical:end:decrement,
+        &:horizontal:start:increment,
+        &:horizontal:end:decrement {
+            display: none;
+        }
+    }
+}

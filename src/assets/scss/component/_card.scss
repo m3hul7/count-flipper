@@ -1,0 +1,187 @@
+.counter-header {
+    background-image: url("./../../images/bg-stars.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.counter-footer {
+    background-image: url("./../../images/pattern-hills.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.counter-heading {
+    letter-spacing: .8rem;
+}
+
+.counter-title {
+    letter-spacing: .5rem;
+}
+
+.behind-card {
+    background-color: $dark;
+    height: $card-behind-height;
+    width: $card-behind-width;
+}
+
+@media only screen and (max-width: 800px) {
+    .behind-card {
+        height: $card-behind-height / 3;
+        width: $card-behind-width / 3;
+    }
+}
+
+.card-top {
+    background-color: #313249;
+    height: $card-height;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+@media only screen and (max-width: 800px) {
+    .card-top {
+        height: $card-height / 3;
+    }
+}
+
+.card-top:before,
+.flip-container:before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    border-top: 16px solid $dark;
+    border-left: 16px solid $dark;
+    width: 0;
+    background: $dark;
+    border-radius: 100px;
+}
+
+.card-top:after,
+.flip-container:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -8px;
+    border-top: 16px solid $dark;
+    border-left: 16px solid $dark;
+    width: 0;
+    background: $dark;
+    border-radius: 100px;
+}
+
+.card-bottom:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border-top: 16px solid $dark;
+    border-left: 16px solid $dark;
+    width: 0;
+    background: $dark;
+    border-radius: 100px;
+}
+
+.card-bottom:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    border-top: 16px solid $dark;
+    border-left: 16px solid $dark;
+    width: 0;
+    background: $dark;
+    border-radius: 100px;
+}
+
+.card-bottom {
+    background-color: $dark-de-saturated-blue;
+    height: $card-height;
+}
+
+@media only screen and (max-width: 800px) {
+    .card-bottom {
+        height: $card-height / 3;
+    }
+}
+
+
+.top-card {
+    font-size: $counter-size;
+}
+
+@media only screen and (max-width: 800px) {
+    .top-card {
+        font-size: $counter-size / 3.2;
+    }
+}
+
+.bottom-card {
+    font-size: $counter-size;
+}
+@media only screen and (max-width: 800px) {
+    .bottom-card{
+        font-size: $counter-size / 3.2;
+        bottom: 1px;
+    }
+}
+
+.flip-container {
+    height: $card-height;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: rotateX(180deg);
+    transform-origin: bottom;
+    background-color: $dark-de-saturated-blue;
+}
+@media only screen and (max-width: 800px) {
+    .flip-container {
+        height: $card-height / 3;
+    
+    }
+}
+
+.flip-animation {
+    animation: myMove 1s infinite;
+    animation-timing-function: linear;
+}
+
+.flipper {
+    font-size: $counter-size;
+    min-height: $card-height-double;
+    transform: rotateX(180deg);
+}
+@media only screen and (max-width: 800px) {
+    .flipper {
+        font-size: $counter-size / 3.2;
+        min-height: $card-height-double / 3;
+    }
+}
+
+@keyframes myMove {
+    0% {
+        transform: rotateX(25deg);
+        margin-top: 2px;
+    }
+
+    25% {
+        transform: rotateX(125deg);
+        margin-top: 2px;
+    }
+
+    50% {
+        transform: rotateX(160deg);
+        margin-top: 2px;
+    }
+
+    75% {
+        transform: rotateX(135deg);
+        margin-top: 2px;
+    }
+
+    100% {
+        margin-top: 2px;
+        transform: rotateX(180deg);
+    }
+}
