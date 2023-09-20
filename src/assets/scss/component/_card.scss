@@ -24,13 +24,6 @@
     width: $card-behind-width;
 }
 
-@media only screen and (max-width: 800px) {
-    .behind-card {
-        height: $card-behind-height / 3;
-        width: $card-behind-width / 3;
-    }
-}
-
 .card-top {
     background-color: #313249;
     height: $card-height;
@@ -38,11 +31,6 @@
     margin-bottom: 2px;
 }
 
-@media only screen and (max-width: 800px) {
-    .card-top {
-        height: $card-height / 3;
-    }
-}
 
 .card-top:before,
 .flip-container:before {
@@ -99,31 +87,13 @@
     height: $card-height;
 }
 
-@media only screen and (max-width: 800px) {
-    .card-bottom {
-        height: $card-height / 3;
-    }
-}
-
-
 .top-card {
     font-size: $counter-size;
 }
 
-@media only screen and (max-width: 800px) {
-    .top-card {
-        font-size: $counter-size / 3.2;
-    }
-}
-
 .bottom-card {
     font-size: $counter-size;
-}
-@media only screen and (max-width: 800px) {
-    .bottom-card{
-        font-size: $counter-size / 3.2;
-        bottom: 1px;
-    }
+    bottom: -6px
 }
 
 .flip-container {
@@ -135,12 +105,6 @@
     transform-origin: bottom;
     background-color: $dark-de-saturated-blue;
 }
-@media only screen and (max-width: 800px) {
-    .flip-container {
-        height: $card-height / 3;
-    
-    }
-}
 
 .flip-animation {
     animation: myMove 1s infinite;
@@ -151,12 +115,6 @@
     font-size: $counter-size;
     min-height: $card-height-double;
     transform: rotateX(180deg);
-}
-@media only screen and (max-width: 800px) {
-    .flipper {
-        font-size: $counter-size / 3.2;
-        min-height: $card-height-double / 3;
-    }
 }
 
 @keyframes myMove {
@@ -173,15 +131,50 @@
     50% {
         transform: rotateX(160deg);
         margin-top: 2px;
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(41,42,45,1) 90%);
     }
 
-    75% {
+    80% {
         transform: rotateX(135deg);
         margin-top: 2px;
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(41,42,45,0.95) 90%);
     }
 
     100% {
         margin-top: 2px;
         transform: rotateX(180deg);
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,0.2) 0%, rgba(41,42,45,0.2) 90%);
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .behind-card {
+        height: $card-behind-height / 2;
+        width: $card-behind-width / 2;
+    }
+    .card-top, .card-bottom {
+        height: $card-height / 2;
+    }
+    .top-card {
+        font-size: $counter-size / 2;
+    }
+    .bottom-card{
+        font-size: $counter-size / 2;
+        bottom: -2px;
+    }
+    .flip-container {
+        height: $card-height / 2;
+    
+    }
+    .flipper {
+        font-size: $counter-size / 2;
+        min-height: $card-height-double / 2;
+    }
+    .counter-title {
+        letter-spacing: .1rem;
     }
 }
