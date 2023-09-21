@@ -87,13 +87,14 @@
     height: $card-height;
 }
 
-.top-card {
+.text-top {
     font-size: $counter-size;
+    top: 20%
 }
 
-.bottom-card {
+.text-bottom {
     font-size: $counter-size;
-    bottom: -6px
+    bottom: 23%;
 }
 
 .flip-container {
@@ -104,49 +105,83 @@
     transform: rotateX(180deg);
     transform-origin: bottom;
     background-color: $dark-de-saturated-blue;
+    margin-top: 2px;
 }
 
 .flip-animation {
-    animation: myMove 1s infinite;
+    animation: myMove .7s ;
     animation-timing-function: linear;
 }
 
 .flipper {
     font-size: $counter-size;
-    min-height: $card-height-double;
+    min-height: 144px;
     transform: rotateX(180deg);
 }
 
 @keyframes myMove {
     0% {
         transform: rotateX(25deg);
-        margin-top: 2px;
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 1) 90%);
     }
 
     25% {
         transform: rotateX(125deg);
-        margin-top: 2px;
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 1) 90%);
     }
 
     50% {
         transform: rotateX(160deg);
-        margin-top: 2px;
         background: rgb(52,54,80);
-        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(41,42,45,1) 90%);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 1) 90%);
+
     }
 
-    80% {
+    75% {
         transform: rotateX(135deg);
-        margin-top: 2px;
         background: rgb(52,54,80);
-        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(41,42,45,0.95) 90%);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 0.95) 90%);
     }
 
     100% {
-        margin-top: 2px;
         transform: rotateX(180deg);
         background: rgb(52,54,80);
-        background: linear-gradient(0deg, rgba(52,54,80,0.2) 0%, rgba(41,42,45,0.2) 90%);
+        background: linear-gradient(0deg, rgba(52,54,80,0.2) 0%, rgba(116, 116, 116, 0.2) 90%);
+    }
+}
+@keyframes myMoveMobile {
+    0% {
+        transform: rotateX(25deg);
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 1) 90%);
+    }
+
+    25% {
+        transform: rotateX(125deg);
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 1) 90%);
+    }
+
+    50% {
+        transform: rotateX(160deg);
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 1) 90%);
+    }
+
+    75% {
+        transform: rotateX(135deg);
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,1) 0%, rgba(116, 116, 116, 0.95) 90%);
+
+    }
+
+    100% {
+        transform: rotateX(180deg);
+        background: rgb(52,54,80);
+        background: linear-gradient(0deg, rgba(52,54,80,0.2) 0%, rgba(116, 116, 116, 0.2) 90%);
+
     }
 }
 
@@ -159,22 +194,25 @@
     .card-top, .card-bottom {
         height: $card-height / 2;
     }
-    .top-card {
+    .text-top {
         font-size: $counter-size / 2;
+        top: 20%
     }
-    .bottom-card{
+    .text-bottom{
         font-size: $counter-size / 2;
-        bottom: -2px;
     }
     .flip-container {
         height: $card-height / 2;
-    
     }
     .flipper {
         font-size: $counter-size / 2;
-        min-height: $card-height-double / 2;
+        min-height: 72px;
     }
     .counter-title {
         letter-spacing: .1rem;
+    }
+    .flip-animation {
+        animation: myMoveMobile .7s;
+        animation-timing-function: linear;
     }
 }
