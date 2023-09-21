@@ -21,7 +21,7 @@ export class CounterComponent {
   public currentDays: number = 0
   constructor() {
     setInterval(() => {
-      const timeRemaining = new Date("2023-10-31T23:59:59").getTime() - new Date().getTime();
+      const timeRemaining = new Date("2023-12-31T23:59:59").getTime() - new Date().getTime();
       this.days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
       this.hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       this.minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
@@ -32,12 +32,21 @@ export class CounterComponent {
       this.minutesFlip = this.currentMinutes !== this.minutes;
       this.hoursFlip = this.currentHours !== this.hours;
       this.daysFlip = this.currentDays !== this.days;
-
+      console.log(this.secondsFlip)
+      setTimeout(() => {
+        this.secondsFlip = false;
+        this.minutesFlip = false;
+        this.hoursFlip = false;
+        this.daysFlip = false;
+        console.log(this.secondsFlip)
+      }, 700);
       // Update current values
       this.currentSeconds = this.seconds;
       this.currentMinutes = this.minutes;
       this.currentHours = this.hours;
       this.currentDays = this.days;
     }, 1000);
+
+    
   }
 }
